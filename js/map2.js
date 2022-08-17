@@ -15,15 +15,15 @@
 
     var bounds = [
       [
-        transform(0),
-        transform(0),
+        transform(-250),
+        transform(-250),
       ],
       [
-        transform(1000),
-        transform(1000),
+        transform(1250),
+        transform(1250),
       ],
     ];
-    var rectangle = L.rectangle(bounds, { color: 'blue', weight: 1 }).addTo(document.map2);
+    var rectangle = L.rectangle(bounds, { color: 'red', weight: 1 }).addTo(document.map2);
     document.map2.setView(reactangleCenter(bounds), 7);
   }
   createMap();
