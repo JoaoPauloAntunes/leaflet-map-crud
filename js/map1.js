@@ -23,17 +23,29 @@
     document.map1.setView(reactangleCenter(bounds), 7);
   }
   createMap();
+
+
+  const destroyMap = () => {
+    document.map1.off();
+    document.map1.remove();
+  }
   
 
   $("#destroy-map1").click((e) => {
     console.log("e:", e);
-    document.map1.off();
-    document.map1.remove();
+    destroyMap();
   });
 
 
   $("#create-map1").click((e) => {
     console.log("e:", e);
+    createMap();
+  });
+
+
+  $("#recreate-map1").click((e) => {
+    console.log("e:", e);
+    destroyMap();
     createMap();
   });
 

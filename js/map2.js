@@ -28,16 +28,28 @@
   }
   createMap();
   
+  
+  const destroyMap = () => {
+    document.map2.off();
+    document.map2.remove();
+  }
+  
 
   $("#destroy-map2").click((e) => {
     console.log("e:", e);
-    document.map2.off();
-    document.map2.remove();
+    destroyMap();
   });
 
 
   $("#create-map2").click((e) => {
     console.log("e:", e);
+    createMap();
+  });
+
+
+  $("#recreate-map2").click((e) => {
+    console.log("e:", e);
+    destroyMap();
     createMap();
   });
 
